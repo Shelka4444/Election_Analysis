@@ -17,23 +17,21 @@ The following tasks were completed to collect the results of an election audit f
 ## Summary
 
 The analysis of the election shows that:
-
-- There were xxxxxx votes cast in the election.
-- The candidates were: XXXXX
+- There were 369,711 votes cast in the election.
+- The candidates were: 
+  - Charles Casper Stockham
+  - Diana DeGette
+  - Raymon Anthony Doane
 - The candidate results were:
-  - XXX recieved x% of the vote and y number of votes.
-  - XXX recieved x% of the vote and y number of votes.
-  - XXX recieved x% of the vote and y number of votes.
+  - Charles Casper Stockham recieved 23.0% of the vote and 85,213 number of votes.
+  - Diana DeGette recieved 73.8% of the vote and 272,892 number of votes. 
+  - Raymon Anthony Doane recieved 3.1% of the vote and 11,606 number of votes.
 - The winner of the election was:
-  - XXX who recieved ....
-
+  - Diana DeGette, who recieved 73.8% of the vote and 272,892 number of votes. 
+  
 ## Challenge Overview
 
 ## Challenge Summary
-
-
-
-
 
 
 
