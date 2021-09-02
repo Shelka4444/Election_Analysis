@@ -8,7 +8,8 @@
 
 # Add our dependencies.
 import csv
-import os
+
+
 
 # Assign a variable for the file to load and the path.
 file_to_load = '/Users/rachelkrasner/Desktop/UCB_Data_Analysis/Module3/Election_Analysis/Resources/election_results.csv'
@@ -16,15 +17,42 @@ file_to_load = '/Users/rachelkrasner/Desktop/UCB_Data_Analysis/Module3/Election_
 # Assign a variable for the file to load and the path.
 file_to_save = '/Users/rachelkrasner/Desktop/UCB_Data_Analysis/Module3/Election_Analysis/Analysis/Election_Analysis.txt'
 
+# 1. initiatlize a total vote counter.
+total_votes = 0
+candidate_options = []
+candidate_votes = {}
+
 # Open the election results and read the file.
 with open(file_to_load) as election_data:
-
-    # To do: read and analyze data here
     file_reader = csv.reader(election_data)
 
-    # Print the header row.    
+    # Read the header row.    
     headers = next(file_reader)
-    print(headers)
+
+    # Print each row in the CSV file.
+    for row in file_reader:
+       # Add to the total vote count.
+       total_votes += 1
+
+    # Print the candidate name from each row
+    candidate_name = row[2]
+
+    # If the candidate does not match any existing candidate
+    #if candidate_name not in candidate_options:
+        # Add the candidate name to candidate list.
+        #candidate_options.append(candidate_name)
+
+        # Begin tracking that candidate's votes.
+        #candidate_votes[candidate_name] = 0
+
+# Print the cadidate list.
+#print(candidate_options)
+
+
+
+
+
+
 
 
 # Assign a variable for the file to load and the path.
@@ -38,27 +66,7 @@ with open(file_to_load) as election_data:
 
 # Create a filename variable to a direct or indirect path to the file.
 #file_to_save = '/Users/rachelkrasner/Desktop/UCB_Data_Analysis/Module3/Election_Analysis/Analysis/Election_Analysis.txt'
-# Using the with statement open the file as a text file.
-##outfile = open(file_to_save, "w")
 
-#outfile write some data to file
-#outfile.write("Hello World")
-
-#close file
-#outfile.close()
-
-
-# Create a filename variable to a direct or indirect path to the file.
-#file_to_save = '/Users/rachelkrasner/Desktop/UCB_Data_Analysis/Module3/Election_Analysis/Analysis/Election_Analysis.txt'
-
-# Using the with statement open the file as a text file.
-#with open(file_to_save, "w") as txt_file:
-
-    #write some data to the file
-    #txt_file.write("Counties in the election:\n ")
-    #txt_file.write("-------------------------\n ")
-    # Write three counties to the file.
-    #txt_file.write("Arapahoe\n Denver\n Jefferson")
 
 
 
