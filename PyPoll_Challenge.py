@@ -6,9 +6,10 @@ import csv
 import os
 
 # Add a variable to load a file from a path.
-file_to_load = "/Users/rachelkrasner/Desktop/UCB_DA/Module3/Election_Analysis/Resources/election_results.csv"
+cwd = os.getcwd()
+file_to_load = os.path.join(cwd,'Desktop', 'UCB_DA', 'Module3', 'Election_Analysis','Resources', 'election_results.csv')
 # Add a variable to save the file to a path.
-file_to_save = "/Users/rachelkrasner/Desktop/UCB_DA/Module3/Election_Analysis/Analysis/election_analysis.txt"
+file_to_save = os.path.join(cwd,'Desktop', 'UCB_DA', 'Module3', 'Election_Analysis','Analysis', 'election_analysis.txt')
 
 # Initialize a total vote counter.
 total_votes = 0
@@ -83,9 +84,9 @@ with open(file_to_save, "w") as txt_file:
     # Print the final vote count (to terminal)
     election_results = (
         f"\nElection Results\n"
-        f"-------------------------\n"
+        f"--------------------------------------\n"
         f"Total Votes: {total_votes:,}\n"
-        f"-------------------------\n"
+        f"--------------------------------------\n"
         f"County Votes:\n")
     print(election_results, end="")
 
@@ -98,7 +99,7 @@ with open(file_to_save, "w") as txt_file:
         # 6c: Calculate the percentage of votes for the county.
         county_vote_percentage = float(county_vote_count) / float(total_votes) * 100
         county_results = (
-            f"{county_name}: {county_vote_percentage:.1f}%\n")
+            f"{county_name}: {county_vote_percentage:.1f}% ({county_vote_count:,})\n")
 
          # 6d: Print the county results to the terminal.
         print(county_results)
@@ -112,12 +113,10 @@ with open(file_to_save, "w") as txt_file:
 
     # 7: Print the county with the largest turnout to the terminal.
     lg_county_summary = (
-        f"-------------------------------------------------\n"
+        f"--------------------------------------\n"
         f"Largest County Turnout: {lg_county}\n"
-        f"County Voter Turnout: {lg_county_vote_count:,}\n"
-        f"County Voter Turnout Percentage: {lg_county_vote_percentage:.1f}%\n"
-        f"-------------------------------------------------\n")
-    print(lg_county_summary, end="")    
+        f"--------------------------------------\n")
+    print(lg_county_summary)    
 
     # 8: Save the county with the largest turnout to a text file.
     txt_file.write(lg_county_summary)
@@ -145,11 +144,11 @@ with open(file_to_save, "w") as txt_file:
 
     # Print the winning candidate (to terminal)
     winning_candidate_summary = (
-        f"-------------------------\n"
+        f"--------------------------------------\n"
         f"Winner: {winning_candidate}\n"
         f"Winning Vote Count: {winning_count:,}\n"
         f"Winning Percentage: {winning_percentage:.1f}%\n"
-        f"-------------------------\n")
+        f"--------------------------------------\n")
     print(winning_candidate_summary)
 
     # Save the winning candidate's name to the text file
